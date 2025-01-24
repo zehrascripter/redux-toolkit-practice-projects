@@ -4,7 +4,7 @@ import Home from './pages/Home/Home'
 import About from './pages/About/About'
 import Contact from './pages/Contact/Contact'
 import Header from './components/Header/Header'
-import ProductDetails from './pages/productDetails/ProductDetails'
+import ProductDetails from './pages/ProductDetails/ProductDetails'
 
 const App = () => {
   return (
