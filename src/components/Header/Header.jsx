@@ -28,7 +28,7 @@ const Header = () => {
                 to="/About"
                 className="hover:text-orange-500 transition duration-300"
               >
-                About Us
+                About
               </Link>
             </li>
             <li>
