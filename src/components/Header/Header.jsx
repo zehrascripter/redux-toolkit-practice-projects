@@ -39,6 +39,22 @@ const Header = () => {
                 Contact
               </Link>
             </li>
+            <li>
+              <Link
+                to="/Login"
+                className="hover:text-orange-500 transition duration-300"
+              >
+                Login
+              </Link>
+            </li>   
+            <li>
+              <Link
+                to="/Signup"
+                className="hover:text-orange-500 transition duration-300"
+              >
+                Sign-Up
+              </Link>
+            </li>
           </ul>
         </nav>
 
@@ -112,6 +128,24 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/Login"
+                className="hover:text-orange-500 transition duration-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Login
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/Signup"
+                className="hover:text-orange-500 transition duration-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Sign-Up
               </Link>
             </li>
           </ul>
