@@ -1,36 +1,36 @@
-import React, { useEffect, useState } from 'react';
-import Card from '../../components/Card/Card';
-import { useNavigate } from 'react-router';
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-  const navigate = useNavigate();
-  const [products, setProducts] = useState([]);
-
-  const fetchProducts = async () => {
-    const response = await fetch('https://fakestoreapi.com/products');
-    const data = await response.json();
-    setProducts(data);
-  };
-
-  useEffect(() => {
-    fetchProducts();
-  }, []);
+  const navigate = useNavigate(); // Navigation ke liye useNavigate hook
 
   return (
-    <div className="container mx-auto px-4 my-10">
-      <h1 className="text-3xl font-bold text-gray-800 text-center mb-8">
-        Our Products
+    <div className="flex flex-col items-center justify-center h-screen space-y-6 bg-gradient-to-br from-blue-100 to-gray-200">
+      <h1 className="text-5xl font-extrabold text-gray-900 mb-8 animate-fade-in">
+        Welcome to My App 🚀
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {products?.map((product) => (
-          <div
-            key={product.id}
-            onClick={() => navigate(`/${product.id}`)}
-            className="cursor-pointer transform hover:scale-105 transition duration-300"
-          >
-            <Card product={product} />
-          </div>
-        ))}
+
+      <div className="flex flex-col space-y-4 w-64">
+        <button
+          onClick={() => navigate("/todolist")}
+          className="px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg shadow-lg hover:scale-105 hover:shadow-xl transition duration-300 ease-in-out transform active:scale-95"
+        >
+          📋 Go to Todo List
+        </button>
+
+        <button
+          onClick={() => navigate("/counter")}
+          className="px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-green-500 to-teal-500 rounded-lg shadow-lg hover:scale-105 hover:shadow-xl transition duration-300 ease-in-out transform active:scale-95"
+        >
+          🔢 Go to Counter
+        </button>
+
+        <button
+          onClick={() => navigate("/notepad")}
+          className="px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg shadow-lg hover:scale-105 hover:shadow-xl transition duration-300 ease-in-out transform active:scale-95"
+        >
+          📝 Go to Notepad
+        </button>
       </div>
     </div>
   );
