@@ -8,7 +8,7 @@ const Header = () => {
         to="/"
         className="text-3xl font-extrabold bg-gradient-to-r from-red-500 to-yellow-500 text-transparent bg-clip-text hover:from-yellow-500 hover:to-red-500 transition-all duration-300"
       >
-        React-Redux
+        React-Redux-Toolkit
       </Link>
     </div>
   );

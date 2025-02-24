@@ -6,7 +6,7 @@ const Home = () => {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen space-y-6 bg-gradient-to-br from-blue-100 to-gray-200">
-      <h1 className="text-5xl font-extrabold text-gray-900 mb-8 animate-fade-in">
+      <h1 className="text-5xl font-extrabold text-gray-900 mb-8 animate-fade-in p-2">
         Welcome to My App 🚀
       </h1>
 
